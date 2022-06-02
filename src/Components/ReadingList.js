@@ -91,7 +91,7 @@ function ReadingList() {
       aria-expanded={open2 ? 'true' : undefined}
       onClick={handleClick2}
     >
-   <i class='bx bxs-bookmark-star' ></i>
+   <i className='bx bxs-bookmark-star' ></i>
     </Button>
     <Menu
       id="fade-menu"

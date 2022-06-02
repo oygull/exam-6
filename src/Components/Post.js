@@ -20,7 +20,7 @@ function Post() {
   commentsDesc: null,
   accImg:{userImg},
   rec: 0})
-
+    const[postReac, setPostReac] = useState()
   const getValue=(e)=>{
       setCommentObj({ acc: 'Oygul Ibrokhimova',
       postedTime: 'now',
@@ -31,7 +31,9 @@ function Post() {
   const submitValue=()=>{
     setCommentArr([commentObj,...commentArr])
   }
-
+  const addReaction =(e)=>{
+    setPostReac(e.target.textContent++);
+  }
   let location = useLocation();
   return (
     <div className='post'>
@@ -55,7 +57,7 @@ function Post() {
               <Tooltip title="+1" placement="top">
               <div  className='reactions'>
                   <i className='bx bxs-smile' ></i>
-                  <p className='reactions'> {el.reactions}</p>
+                  <p onClick={addReaction} className='reactions'> {el.reactions}</p>
                 </div>
              </Tooltip>
                
@@ -67,12 +69,12 @@ function Post() {
                   <i className='bx bx-dots-horizontal-rounded' ></i>
                 </div>
               </div>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Responses</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div className="offcanvas-header">
+                  <h5 className="offcanvas-title" id="offcanvasRightLabel">Responses</h5>
+                  <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div className="offcanvas-body">
                   <div className='form-box'>
                         <div className='form-box-header'>
                            <Avatar alt="Remy Sharp" src={userImg} />

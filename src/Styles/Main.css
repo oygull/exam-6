@@ -504,3 +504,9 @@ img{
   color: #fff;
   border: none;
 }
+.reactions{
+  cursor: pointer;
+}
+.reactions:hover{
+  font-weight: bold;
+}

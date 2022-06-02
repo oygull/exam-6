@@ -74,7 +74,7 @@ function List() {
                     <span className='circle-span'><i className='bx bx-bookmark-alt-plus'></i></span>
                 </div>
             </div>
-                <button className='close-list-btn'><i class='bx bx-x' ></i></button>
+                <button className='close-list-btn'><i className='bx bx-x' ></i></button>
         </div>
         <div className='reading-list'>
           <div>
